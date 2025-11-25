@@ -1,7 +1,7 @@
 import json
 from flask import Flask, jsonify, render_template, abort, request
 from flask_cors import CORS
-from werkzeug.middleware.proxy_fix import ProxyFix
+# from werkzeug.middleware.proxy_fix import ProxyFix # Temporarily disabled
 import math
 import uuid
 import logging
@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
-app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_port=1)
+# app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_port=1) # Temporarily disabled
 
 # Allow CORS for all origins on API routes to support VPS/remote access
 CORS(app, resources={r"/api/*": {"origins": "*"}})
@@ -29,8 +29,11 @@ def restrict_api_access():
         # Check if the Referer header is present and matches the host
         # This ensures the request is coming from our frontend pages
         referer = request.headers.get('Referer')
-        if not referer or request.host not in referer:
-            logger.warning(f"Blocked API access due to Referer mismatch. Host: {request.host}, Referer: {referer}")
+        # Trust X-Forwarded-Host if present (for Caddy), otherwise use Host
+        host = request.headers.get('X-Forwarded-Host', request.host)
+        
+        if not referer or host not in referer:
+            logger.warning(f"Blocked API access due to Referer mismatch. Host: {host}, Referer: {referer}")
             abort(403, description="Forbidden")
 
         # Check for Auth Token cookie
@@ -51,13 +54,8 @@ def verify_challenge():
         # Log headers to debug potential proxy/stripping issues
         logger.info(f"Verify Challenge Headers: {dict(request.headers)}")
         
-        # Force read from input stream if data is empty but Content-Length > 0
-        # This can happen with some WSGI servers or proxy setups
+        # Try to read data using get_data() which handles caching
         raw_data = request.get_data()
-        if not raw_data and request.content_length and request.content_length > 0:
-            logger.info("Attempting to read from input stream directly...")
-            raw_data = request.stream.read()
-            
         logger.info(f"Verify Challenge Raw Data: {raw_data}")
 
         data = None
