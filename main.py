@@ -48,19 +48,27 @@ def restrict_api_access():
 @app.route('/verify-challenge', methods=['POST'])
 def verify_challenge():
     try:
-        # Try to get JSON, but handle cases where Content-Type might be stripped or incorrect
-        data = request.get_json(force=True, silent=True)
+        # Log headers to debug potential proxy/stripping issues
+        logger.info(f"Verify Challenge Headers: {dict(request.headers)}")
         
-        if data is None:
-            # Fallback: try to parse data manually if get_json fails
+        # Read raw data first
+        raw_data = request.get_data()
+        logger.info(f"Verify Challenge Raw Data: {raw_data}")
+
+        data = None
+        if raw_data:
             try:
-                data = json.loads(request.data)
-            except Exception:
-                pass
+                data = json.loads(raw_data)
+            except Exception as e:
+                logger.error(f"JSON parse error: {e}")
 
         if not data:
-            logger.error(f"Challenge failed: No JSON data received. Content-Type: {request.content_type}, Data: {request.data}")
-            abort(400, description="Invalid Request")
+            # If data is still empty, check if it was parsed as form data (unlikely but possible)
+            if request.form:
+                data = request.form.to_dict()
+            else:
+                logger.error(f"Challenge failed: No data received. Content-Length: {request.content_length}")
+                abort(400, description="Invalid Request: Empty Body")
             
         is_webdriver = data.get('webdriver')
         next_url = data.get('next', '/')

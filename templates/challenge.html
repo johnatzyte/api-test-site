@@ -45,8 +45,11 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const isWebdriver = navigator.webdriver;
+            // Ensure boolean value
+            const isWebdriver = !!navigator.webdriver;
             const nextUrl = "{{ next_url }}";
+            
+            console.log("Sending challenge response:", { webdriver: isWebdriver, next: nextUrl });
 
             fetch('/verify-challenge', {
                 method: 'POST',
