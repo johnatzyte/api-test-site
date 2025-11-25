@@ -1,6 +1,7 @@
 import json
 from flask import Flask, jsonify, render_template, abort, request
 from flask_cors import CORS
+from werkzeug.middleware.proxy_fix import ProxyFix
 import math
 import uuid
 import logging
@@ -10,6 +11,8 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
+app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_port=1)
+
 # Allow CORS for all origins on API routes to support VPS/remote access
 CORS(app, resources={r"/api/*": {"origins": "*"}})
 
@@ -27,7 +30,7 @@ def restrict_api_access():
         # This ensures the request is coming from our frontend pages
         referer = request.headers.get('Referer')
         if not referer or request.host not in referer:
-            logger.warning(f"Blocked API access due to Referer: {referer}")
+            logger.warning(f"Blocked API access due to Referer mismatch. Host: {request.host}, Referer: {referer}")
             abort(403, description="Forbidden")
 
         # Check for Auth Token cookie
@@ -36,7 +39,7 @@ def restrict_api_access():
             abort(403, description="Forbidden: Missing Auth Token")
     
     # Check if it's a page request (not API, not static, not verify)
-    elif not request.path.startswith('/static/') and request.path != '/verify-challenge':
+    elif not request.path.startswith('/static/') and request.path != '/verify-challenge' and request.path != '/favicon.ico':
         # If cookie is missing, serve challenge
         if not request.cookies.get('AUTH_TOKEN'):
             logger.info(f"Missing Auth Token for {request.path}, serving challenge")
@@ -45,9 +48,18 @@ def restrict_api_access():
 @app.route('/verify-challenge', methods=['POST'])
 def verify_challenge():
     try:
+        # Try to get JSON, but handle cases where Content-Type might be stripped or incorrect
         data = request.get_json(force=True, silent=True)
+        
+        if data is None:
+            # Fallback: try to parse data manually if get_json fails
+            try:
+                data = json.loads(request.data)
+            except Exception:
+                pass
+
         if not data:
-            logger.error("Challenge failed: No JSON data received")
+            logger.error(f"Challenge failed: No JSON data received. Content-Type: {request.content_type}, Data: {request.data}")
             abort(400, description="Invalid Request")
             
         is_webdriver = data.get('webdriver')
@@ -63,7 +75,10 @@ def verify_challenge():
             
         logger.info("Challenge passed. Issuing Auth Token.")
         resp = jsonify({'status': 'success', 'redirect': next_url})
-        resp.set_cookie('AUTH_TOKEN', str(uuid.uuid4()), httponly=True, samesite='Lax')
+        
+        # Determine if we should use Secure cookies (if request is HTTPS)
+        is_secure = request.scheme == 'https'
+        resp.set_cookie('AUTH_TOKEN', str(uuid.uuid4()), httponly=True, samesite='Lax', secure=is_secure)
         return resp
     except Exception as e:
         logger.error(f"Error in verify_challenge: {str(e)}")
