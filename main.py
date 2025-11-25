@@ -10,8 +10,8 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
-# Restrict CORS to allow only the frontend origin
-CORS(app, resources={r"/api/*": {"origins": "http://127.0.0.1:5001"}})
+# Allow CORS for all origins on API routes to support VPS/remote access
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 @app.before_request
 def restrict_api_access():
@@ -44,22 +44,30 @@ def restrict_api_access():
 
 @app.route('/verify-challenge', methods=['POST'])
 def verify_challenge():
-    data = request.get_json()
-    is_webdriver = data.get('webdriver')
-    next_url = data.get('next', '/')
-    
-    logger.info(f"Challenge verification attempt. Webdriver: {is_webdriver}")
-
-    # Check if webdriver is false (or undefined/None which we treat as passing for now)
-    # If it is explicitly True, we fail.
-    if is_webdriver is True:
-        logger.warning("Challenge failed: Bot Detected (webdriver=True)")
-        abort(403, description="Forbidden: Bot Detected")
+    try:
+        data = request.get_json(force=True, silent=True)
+        if not data:
+            logger.error("Challenge failed: No JSON data received")
+            abort(400, description="Invalid Request")
+            
+        is_webdriver = data.get('webdriver')
+        next_url = data.get('next', '/')
         
-    logger.info("Challenge passed. Issuing Auth Token.")
-    resp = jsonify({'status': 'success', 'redirect': next_url})
-    resp.set_cookie('AUTH_TOKEN', str(uuid.uuid4()), httponly=True, samesite='Strict')
-    return resp
+        logger.info(f"Challenge verification attempt. Webdriver: {is_webdriver}")
+
+        # Check if webdriver is false (or undefined/None which we treat as passing for now)
+        # If it is explicitly True, we fail.
+        if is_webdriver is True:
+            logger.warning("Challenge failed: Bot Detected (webdriver=True)")
+            abort(403, description="Forbidden: Bot Detected")
+            
+        logger.info("Challenge passed. Issuing Auth Token.")
+        resp = jsonify({'status': 'success', 'redirect': next_url})
+        resp.set_cookie('AUTH_TOKEN', str(uuid.uuid4()), httponly=True, samesite='Lax')
+        return resp
+    except Exception as e:
+        logger.error(f"Error in verify_challenge: {str(e)}")
+        abort(500)
 
 def load_products():
     with open('products.json', 'r') as f:
