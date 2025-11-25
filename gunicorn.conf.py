@@ -1,6 +1,10 @@
-bind = "127.0.0.1:5001"
+bind = "0.0.0.0:5001"
 workers = 4
 accesslog = "-"
 errorlog = "-"
-loglevel = "info"
+loglevel = "debug"
 proc_name = "ecommerce_demo"
+# Increase timeout to prevent premature closing
+timeout = 120
+# Ensure we don't buffer too aggressively
+worker_class = "sync"
