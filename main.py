@@ -51,8 +51,13 @@ def verify_challenge():
         # Log headers to debug potential proxy/stripping issues
         logger.info(f"Verify Challenge Headers: {dict(request.headers)}")
         
-        # Read raw data first
+        # Force read from input stream if data is empty but Content-Length > 0
+        # This can happen with some WSGI servers or proxy setups
         raw_data = request.get_data()
+        if not raw_data and request.content_length and request.content_length > 0:
+            logger.info("Attempting to read from input stream directly...")
+            raw_data = request.stream.read()
+            
         logger.info(f"Verify Challenge Raw Data: {raw_data}")
 
         data = None
