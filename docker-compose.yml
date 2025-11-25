@@ -1,0 +1,10 @@
+services:
+  web:
+    build: .
+    container_name: ecommerce_demo
+    ports:
+      - "5001:5001"
+    volumes:
+      # Mount products.json so you can update products without rebuilding
+      - ./products.json:/app/products.json
+    restart: unless-stopped

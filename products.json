@@ -1,0 +1,1809 @@
+[
+  {
+    "id": "BP-2024-CER",
+    "name": "Premium Ceramic Brake Pads",
+    "description": "High-performance ceramic brake pads designed for superior stopping power and low dust. Includes hardware kit.",
+    "price": 45.99,
+    "currency": "USD",
+    "category": "Brakes",
+    "manufacturer": "StopSafe",
+    "part_number": "BP-2024-CER",
+    "stock_quantity": 150,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Toyota Camry 2018-2023",
+      "Honda Accord 2019-2024"
+    ],
+    "weight": "2.5 lbs",
+    "dimensions": "6x4x2 inches",
+    "rating": 4.8
+  },
+  {
+    "id": "OF-9988",
+    "name": "Synthetic Oil Filter",
+    "description": "Extended life oil filter for synthetic motor oils. Traps 99% of contaminants.",
+    "price": 12.5,
+    "currency": "USD",
+    "category": "Filters",
+    "manufacturer": "PureFlow",
+    "part_number": "OF-9988",
+    "stock_quantity": 500,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Ford F-150 2015-2022",
+      "Ford Mustang 2016-2023"
+    ],
+    "weight": "0.8 lbs",
+    "dimensions": "3x3x4 inches",
+    "rating": 4.5
+  },
+  {
+    "id": "SP-IR-4X",
+    "name": "Iridium Spark Plug (Pack of 4)",
+    "description": "Long-lasting iridium spark plugs for improved fuel efficiency and smoother acceleration.",
+    "price": 38.0,
+    "currency": "USD",
+    "category": "Ignition",
+    "manufacturer": "SparkMaster",
+    "part_number": "SP-IR-4X",
+    "stock_quantity": 200,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Chevrolet Cruze 2014-2019",
+      "Chevrolet Malibu 2016-2021"
+    ],
+    "weight": "0.4 lbs",
+    "dimensions": "4x1x1 inches",
+    "rating": 4.7
+  },
+  {
+    "id": "ALT-160A",
+    "name": "High Output Alternator",
+    "description": "160 Amp alternator for high-demand electrical systems. Direct fit replacement.",
+    "price": 189.99,
+    "currency": "USD",
+    "category": "Electrical",
+    "manufacturer": "VoltTech",
+    "part_number": "ALT-160A",
+    "stock_quantity": 25,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Jeep Wrangler 2012-2018",
+      "Dodge Charger 2011-2020"
+    ],
+    "weight": "12 lbs",
+    "dimensions": "8x8x8 inches",
+    "rating": 4.9
+  },
+  {
+    "id": "HL-LED-L",
+    "name": "LED Headlight Assembly (Left)",
+    "description": "Bright LED headlight assembly with daytime running lights. DOT approved.",
+    "price": 250.0,
+    "currency": "USD",
+    "category": "Lighting",
+    "manufacturer": "LuminaAuto",
+    "part_number": "HL-LED-L",
+    "stock_quantity": 40,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "BMW 3 Series 2015-2018"
+    ],
+    "weight": "5 lbs",
+    "dimensions": "20x10x10 inches",
+    "rating": 4.6
+  },
+  {
+    "id": "BAT-AGM-H7",
+    "name": "AGM Car Battery",
+    "description": "Absorbent Glass Mat battery with 800 CCA. Maintenance-free and spill-proof.",
+    "price": 210.0,
+    "currency": "USD",
+    "category": "Batteries",
+    "manufacturer": "PowerStart",
+    "part_number": "BAT-AGM-H7",
+    "stock_quantity": 60,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Audi A4 2010-2016",
+      "Volkswagen Golf 2012-2019"
+    ],
+    "weight": "45 lbs",
+    "dimensions": "12x7x8 inches",
+    "rating": 4.4
+  },
+  {
+    "id": "CAI-2024-X",
+    "name": "Performance Air Intake System",
+    "description": "Cold air intake system for increased horsepower and torque. Washable filter.",
+    "price": 299.99,
+    "currency": "USD",
+    "category": "Engine",
+    "manufacturer": "TurboFlow",
+    "part_number": "CAI-2024-X",
+    "stock_quantity": 30,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Subaru WRX 2015-2021",
+      "Subaru STI 2015-2021"
+    ],
+    "weight": "6 lbs",
+    "dimensions": "18x12x10 inches",
+    "rating": 4.8
+  },
+  {
+    "id": "FM-AW-SET",
+    "name": "All-Weather Floor Mats (Set)",
+    "description": "Heavy-duty rubber floor mats with deep channels to trap water and debris.",
+    "price": 89.95,
+    "currency": "USD",
+    "category": "Interior",
+    "manufacturer": "RuggedMats",
+    "part_number": "FM-AW-SET",
+    "stock_quantity": 100,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Universal Fit"
+    ],
+    "weight": "10 lbs",
+    "dimensions": "30x20x2 inches",
+    "rating": 4.3
+  },
+  {
+    "id": "RR-CB-50",
+    "name": "Roof Rack Cross Bars",
+    "description": "Aluminum cross bars for roof rails. Supports up to 150 lbs load capacity.",
+    "price": 120.0,
+    "currency": "USD",
+    "category": "Exterior",
+    "manufacturer": "TravelGear",
+    "part_number": "RR-CB-50",
+    "stock_quantity": 45,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Toyota RAV4 2019-2024",
+      "Honda CR-V 2017-2023"
+    ],
+    "weight": "8 lbs",
+    "dimensions": "50x4x3 inches",
+    "rating": 4.5
+  },
+  {
+    "id": "OBD-SCAN-V2",
+    "name": "OBD2 Scanner Diagnostic Tool",
+    "description": "Read and clear check engine lights. Live data stream and freeze frame data.",
+    "price": 55.0,
+    "currency": "USD",
+    "category": "Tools",
+    "manufacturer": "ScanTech",
+    "part_number": "OBD-SCAN-V2",
+    "stock_quantity": 80,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "All OBD2 Compliant Vehicles (1996+)"
+    ],
+    "weight": "0.5 lbs",
+    "dimensions": "5x3x1 inches",
+    "rating": 4.7
+  },
+  {
+    "id": "SA-HD-500",
+    "name": "Heavy Duty Shock Absorber",
+    "description": "Gas-charged shock absorber for improved handling and stability.",
+    "price": 65.0,
+    "currency": "USD",
+    "category": "Suspension",
+    "manufacturer": "RideSmooth",
+    "part_number": "SA-HD-500",
+    "stock_quantity": 90,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Ford F-250 2011-2016"
+    ],
+    "weight": "6 lbs",
+    "dimensions": "24x3x3 inches",
+    "rating": 4.6
+  },
+  {
+    "id": "CAF-AC-22",
+    "name": "Cabin Air Filter",
+    "description": "Activated carbon cabin air filter to remove odors and allergens.",
+    "price": 18.0,
+    "currency": "USD",
+    "category": "Filters",
+    "manufacturer": "PureAir",
+    "part_number": "CAF-AC-22",
+    "stock_quantity": 300,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Honda Civic 2016-2021"
+    ],
+    "weight": "0.3 lbs",
+    "dimensions": "8x9x1 inches",
+    "rating": 4.8
+  },
+  {
+    "id": "WB-24-BEAM",
+    "name": "Wiper Blades (24 inch)",
+    "description": "All-season beam wiper blades for streak-free visibility.",
+    "price": 14.99,
+    "currency": "USD",
+    "category": "Wipers",
+    "manufacturer": "ClearView",
+    "part_number": "WB-24-BEAM",
+    "stock_quantity": 400,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Universal J-Hook"
+    ],
+    "weight": "0.5 lbs",
+    "dimensions": "24x2x1 inches",
+    "rating": 4.4
+  },
+  {
+    "id": "OIL-5W30-5Q",
+    "name": "Motor Oil 5W-30 (5 Quarts)",
+    "description": "Full synthetic motor oil for advanced engine protection.",
+    "price": 28.5,
+    "currency": "USD",
+    "category": "Fluids",
+    "manufacturer": "LubeGuard",
+    "part_number": "OIL-5W30-5Q",
+    "stock_quantity": 120,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Gasoline Engines"
+    ],
+    "weight": "10 lbs",
+    "dimensions": "12x8x5 inches",
+    "rating": 4.9
+  },
+  {
+    "id": "AF-5050-GAL",
+    "name": "Radiator Coolant (1 Gallon)",
+    "description": "Pre-diluted 50/50 antifreeze and coolant. Long-life formula.",
+    "price": 16.0,
+    "currency": "USD",
+    "category": "Fluids",
+    "manufacturer": "CoolRun",
+    "part_number": "AF-5050-GAL",
+    "stock_quantity": 150,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Universal"
+    ],
+    "weight": "9 lbs",
+    "dimensions": "12x6x6 inches",
+    "rating": 4.7
+  },
+  {
+    "id": "TBK-WP-99",
+    "name": "Timing Belt Kit",
+    "description": "Complete timing belt kit with water pump and tensioners.",
+    "price": 145.0,
+    "currency": "USD",
+    "category": "Engine",
+    "manufacturer": "PrecisionDrive",
+    "part_number": "TBK-WP-99",
+    "stock_quantity": 35,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Toyota Corolla 2009-2013"
+    ],
+    "weight": "5 lbs",
+    "dimensions": "10x8x6 inches",
+    "rating": 4.6
+  },
+  {
+    "id": "FP-ASM-01",
+    "name": "Fuel Pump Assembly",
+    "description": "Electric fuel pump module assembly with sending unit.",
+    "price": 110.0,
+    "currency": "USD",
+    "category": "Fuel System",
+    "manufacturer": "FlowMaster",
+    "part_number": "FP-ASM-01",
+    "stock_quantity": 40,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Chevrolet Silverado 1500 2007-2013"
+    ],
+    "weight": "4 lbs",
+    "dimensions": "14x6x6 inches",
+    "rating": 4.3
+  },
+  {
+    "id": "STR-NEW-12V",
+    "name": "Starter Motor",
+    "description": "New starter motor with high torque for reliable starting.",
+    "price": 130.0,
+    "currency": "USD",
+    "category": "Electrical",
+    "manufacturer": "StartRight",
+    "part_number": "STR-NEW-12V",
+    "stock_quantity": 30,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Honda Civic 2006-2011"
+    ],
+    "weight": "8 lbs",
+    "dimensions": "10x5x5 inches",
+    "rating": 4.5
+  },
+  {
+    "id": "WB-HUB-ABS",
+    "name": "Wheel Bearing Hub Assembly",
+    "description": "Front wheel bearing and hub assembly with ABS sensor.",
+    "price": 75.0,
+    "currency": "USD",
+    "category": "Drivetrain",
+    "manufacturer": "RollSmooth",
+    "part_number": "WB-HUB-ABS",
+    "stock_quantity": 70,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Nissan Altima 2013-2018"
+    ],
+    "weight": "10 lbs",
+    "dimensions": "8x8x6 inches",
+    "rating": 4.7
+  },
+  {
+    "id": "O2-UP-DIR",
+    "name": "Oxygen Sensor (Upstream)",
+    "description": "Direct fit oxygen sensor for accurate air/fuel ratio monitoring.",
+    "price": 42.0,
+    "currency": "USD",
+    "category": "Sensors",
+    "manufacturer": "SenseTech",
+    "part_number": "O2-UP-DIR",
+    "stock_quantity": 110,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Toyota RAV4 2006-2012"
+    ],
+    "weight": "0.3 lbs",
+    "dimensions": "6x2x2 inches",
+    "rating": 4.6
+  },
+  {
+    "id": "CW-SOAP-64",
+    "name": "Car Wash Soap (64 oz)",
+    "description": "High-foaming car wash soap that is safe for wax and sealants.",
+    "price": 9.99,
+    "currency": "USD",
+    "category": "Car Care",
+    "manufacturer": "ShineOn",
+    "part_number": "CW-SOAP-64",
+    "stock_quantity": 200,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "All Vehicles"
+    ],
+    "weight": "4.5 lbs",
+    "dimensions": "10x5x3 inches",
+    "rating": 4.8
+  },
+  {
+    "id": "MF-TWL-12",
+    "name": "Microfiber Towels (Pack of 12)",
+    "description": "Ultra-soft microfiber towels for detailing and cleaning.",
+    "price": 15.99,
+    "currency": "USD",
+    "category": "Car Care",
+    "manufacturer": "SoftTouch",
+    "part_number": "MF-TWL-12",
+    "stock_quantity": 300,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Universal"
+    ],
+    "weight": "1 lb",
+    "dimensions": "12x12x2 inches",
+    "rating": 4.9
+  },
+  {
+    "id": "TPG-DIGI",
+    "name": "Tire Pressure Gauge",
+    "description": "Digital tire pressure gauge with backlit display.",
+    "price": 12.99,
+    "currency": "USD",
+    "category": "Tools",
+    "manufacturer": "AccuMeasure",
+    "part_number": "TPG-DIGI",
+    "stock_quantity": 150,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Universal"
+    ],
+    "weight": "0.2 lbs",
+    "dimensions": "6x2x1 inches",
+    "rating": 4.5
+  },
+  {
+    "id": "JS-PB-1000",
+    "name": "Jump Starter Power Bank",
+    "description": "Portable jump starter with 1000A peak current and USB charging ports.",
+    "price": 79.99,
+    "currency": "USD",
+    "category": "Batteries",
+    "manufacturer": "PowerBoost",
+    "part_number": "JS-PB-1000",
+    "stock_quantity": 50,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Gas Engines up to 6.0L, Diesel up to 3.0L"
+    ],
+    "weight": "2 lbs",
+    "dimensions": "7x3x1.5 inches",
+    "rating": 4.8
+  },
+  {
+    "id": "BL-H11-2PK",
+    "name": "H11 Halogen Headlight Bulbs (Pack of 2)",
+    "description": "Standard replacement halogen headlight bulbs. DOT compliant.",
+    "price": 24.99,
+    "currency": "USD",
+    "category": "Lighting",
+    "manufacturer": "BrightLite",
+    "part_number": "BL-H11-2PK",
+    "stock_quantity": 180,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Universal H11 Fitment"
+    ],
+    "weight": "0.2 lbs",
+    "dimensions": "5x4x2 inches",
+    "rating": 4.5
+  },
+  {
+    "id": "TR-JACK-3T",
+    "name": "3-Ton Hydraulic Floor Jack",
+    "description": "Heavy-duty steel floor jack with 3-ton lifting capacity. Rapid pump technology.",
+    "price": 149.99,
+    "currency": "USD",
+    "category": "Tools",
+    "manufacturer": "LiftMaster",
+    "part_number": "TR-JACK-3T",
+    "stock_quantity": 40,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Universal"
+    ],
+    "weight": "70 lbs",
+    "dimensions": "28x14x8 inches",
+    "rating": 4.8
+  },
+  {
+    "id": "EX-TIP-SS",
+    "name": "Stainless Steel Exhaust Tip",
+    "description": "Polished stainless steel exhaust tip. Bolt-on installation.",
+    "price": 35.0,
+    "currency": "USD",
+    "category": "Exhaust",
+    "manufacturer": "ChromeFinish",
+    "part_number": "EX-TIP-SS",
+    "stock_quantity": 95,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Universal 2.5 inch Inlet"
+    ],
+    "weight": "1.5 lbs",
+    "dimensions": "8x4x4 inches",
+    "rating": 4.4
+  },
+  {
+    "id": "ST-COV-LEA",
+    "name": "Leather Steering Wheel Cover",
+    "description": "Genuine leather steering wheel cover for added grip and comfort.",
+    "price": 29.99,
+    "currency": "USD",
+    "category": "Interior",
+    "manufacturer": "LuxeDrive",
+    "part_number": "ST-COV-LEA",
+    "stock_quantity": 120,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Universal 14.5-15.5 inch"
+    ],
+    "weight": "0.8 lbs",
+    "dimensions": "15x15x1.5 inches",
+    "rating": 4.6
+  },
+  {
+    "id": "BR-FL-DOT4",
+    "name": "DOT 4 Brake Fluid (32 oz)",
+    "description": "High-performance synthetic brake fluid for ABS and disc brake systems.",
+    "price": 11.5,
+    "currency": "USD",
+    "category": "Fluids",
+    "manufacturer": "StopSure",
+    "part_number": "BR-FL-DOT4",
+    "stock_quantity": 250,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Universal DOT 4"
+    ],
+    "weight": "2.2 lbs",
+    "dimensions": "9x4x4 inches",
+    "rating": 4.9
+  },
+  {
+    "id": "TL-BOX-ALU",
+    "name": "Aluminum Truck Tool Box",
+    "description": "Diamond plate aluminum crossover tool box for trucks. Secure locking paddle handles.",
+    "price": 350.0,
+    "currency": "USD",
+    "category": "Exterior",
+    "manufacturer": "ToughBox",
+    "part_number": "TL-BOX-ALU",
+    "stock_quantity": 15,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Full-Size Trucks"
+    ],
+    "weight": "45 lbs",
+    "dimensions": "70x20x15 inches",
+    "rating": 4.7
+  },
+  {
+    "id": "AC-COMP-UN",
+    "name": "A/C Compressor",
+    "description": "New A/C compressor with clutch. Pre-filled with PAG oil.",
+    "price": 220.0,
+    "currency": "USD",
+    "category": "Climate Control",
+    "manufacturer": "CoolAir",
+    "part_number": "AC-COMP-UN",
+    "stock_quantity": 25,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Honda Accord 2008-2012"
+    ],
+    "weight": "15 lbs",
+    "dimensions": "10x8x8 inches",
+    "rating": 4.5
+  },
+  {
+    "id": "TR-HITCH-C3",
+    "name": "Class 3 Trailer Hitch",
+    "description": "Custom fit trailer hitch receiver. Rated for up to 5,000 lbs GTW.",
+    "price": 180.0,
+    "currency": "USD",
+    "category": "Towing",
+    "manufacturer": "HaulMaster",
+    "part_number": "TR-HITCH-C3",
+    "stock_quantity": 30,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Ford Explorer 2011-2019"
+    ],
+    "weight": "35 lbs",
+    "dimensions": "40x15x10 inches",
+    "rating": 4.8
+  },
+  {
+    "id": "SP-WIR-SET",
+    "name": "Spark Plug Wire Set",
+    "description": "High-temperature silicone spark plug wire set for maximum voltage delivery.",
+    "price": 45.0,
+    "currency": "USD",
+    "category": "Ignition",
+    "manufacturer": "SparkMaster",
+    "part_number": "SP-WIR-SET",
+    "stock_quantity": 85,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Chevrolet V8 Engines"
+    ],
+    "weight": "1.5 lbs",
+    "dimensions": "10x10x3 inches",
+    "rating": 4.6
+  },
+  {
+    "id": "FU-INJ-4PK",
+    "name": "Fuel Injector Set (Pack of 4)",
+    "description": "Remanufactured fuel injectors flow-matched for balanced performance.",
+    "price": 160.0,
+    "currency": "USD",
+    "category": "Fuel System",
+    "manufacturer": "FlowTech",
+    "part_number": "FU-INJ-4PK",
+    "stock_quantity": 40,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Toyota 2.4L Engines"
+    ],
+    "weight": "1 lb",
+    "dimensions": "6x4x2 inches",
+    "rating": 4.7
+  },
+  {
+    "id": "Alt-120A",
+    "name": "High Output Alternator",
+    "description": "120 Amp alternator for high demand audio systems.",
+    "price": 145.99,
+    "currency": "USD",
+    "category": "Electrical",
+    "manufacturer": "VoltTech",
+    "part_number": "Alt-120A",
+    "stock_quantity": 28,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "3 lbs",
+    "dimensions": "8x15x6 inches",
+    "rating": 4.8
+  },
+  {
+    "id": "Strut-F-01",
+    "name": "Front Strut Assembly",
+    "description": "Complete strut assembly for front suspension restoration.",
+    "price": 89.99,
+    "currency": "USD",
+    "category": "Suspension",
+    "manufacturer": "RideSmooth",
+    "part_number": "Strut-F-01",
+    "stock_quantity": 190,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "8 lbs",
+    "dimensions": "13x6x4 inches",
+    "rating": 4.2
+  },
+  {
+    "id": "Rad-Alum",
+    "name": "Aluminum Radiator",
+    "description": "High efficiency aluminum radiator for better cooling.",
+    "price": 120.5,
+    "currency": "USD",
+    "category": "Engine",
+    "manufacturer": "PowerDrive",
+    "part_number": "Rad-Alum",
+    "stock_quantity": 97,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "10 lbs",
+    "dimensions": "12x14x4 inches",
+    "rating": 4.9
+  },
+  {
+    "id": "Muffler-Perf",
+    "name": "Performance Muffler",
+    "description": "Stainless steel muffler for deep tone and better flow.",
+    "price": 75.0,
+    "currency": "USD",
+    "category": "Exhaust",
+    "manufacturer": "SilentFlow",
+    "part_number": "Muffler-Perf",
+    "stock_quantity": 169,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "1 lbs",
+    "dimensions": "7x20x7 inches",
+    "rating": 3.8
+  },
+  {
+    "id": "Mat-Floor-Set",
+    "name": "All-Weather Floor Mats",
+    "description": "Heavy duty rubber floor mats, set of 4.",
+    "price": 49.99,
+    "currency": "USD",
+    "category": "Interior",
+    "manufacturer": "ComfortPlus",
+    "part_number": "Mat-Floor-Set",
+    "stock_quantity": 171,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "7 lbs",
+    "dimensions": "20x11x2 inches",
+    "rating": 4.1
+  },
+  {
+    "id": "Wiper-24",
+    "name": "24-inch Wiper Blade",
+    "description": "All-season beam wiper blade.",
+    "price": 14.99,
+    "currency": "USD",
+    "category": "Exterior",
+    "manufacturer": "ClearView",
+    "part_number": "Wiper-24",
+    "stock_quantity": 181,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "12 lbs",
+    "dimensions": "16x5x3 inches",
+    "rating": 3.9
+  },
+  {
+    "id": "Batt-AGM",
+    "name": "AGM Car Battery",
+    "description": "Maintenance free AGM battery with 3 year warranty.",
+    "price": 189.99,
+    "currency": "USD",
+    "category": "Electrical",
+    "manufacturer": "VoltTech",
+    "part_number": "Batt-AGM",
+    "stock_quantity": 113,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "10 lbs",
+    "dimensions": "6x17x6 inches",
+    "rating": 3.7
+  },
+  {
+    "id": "Belt-Serp",
+    "name": "Serpentine Belt",
+    "description": "Heavy duty serpentine belt.",
+    "price": 25.5,
+    "currency": "USD",
+    "category": "Engine",
+    "manufacturer": "PowerDrive",
+    "part_number": "Belt-Serp",
+    "stock_quantity": 57,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "5 lbs",
+    "dimensions": "16x20x4 inches",
+    "rating": 5.0
+  },
+  {
+    "id": "Rotor-D-S",
+    "name": "Drilled & Slotted Rotors",
+    "description": "Performance brake rotors for better heat dissipation.",
+    "price": 110.0,
+    "currency": "USD",
+    "category": "Brakes",
+    "manufacturer": "StopSafe",
+    "part_number": "Rotor-D-S",
+    "stock_quantity": 132,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "10 lbs",
+    "dimensions": "7x20x7 inches",
+    "rating": 4.1
+  },
+  {
+    "id": "Filter-Air-Perf",
+    "name": "High Flow Air Filter",
+    "description": "Reusable high flow air filter.",
+    "price": 45.0,
+    "currency": "USD",
+    "category": "Filters",
+    "manufacturer": "PureFlow",
+    "part_number": "Filter-Air-Perf",
+    "stock_quantity": 168,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "4 lbs",
+    "dimensions": "14x6x8 inches",
+    "rating": 3.9
+  },
+  {
+    "id": "Coil-Pack-Set",
+    "name": "Ignition Coil Pack Set",
+    "description": "Set of 4 ignition coils.",
+    "price": 95.0,
+    "currency": "USD",
+    "category": "Ignition",
+    "manufacturer": "SparkMaster",
+    "part_number": "Coil-Pack-Set",
+    "stock_quantity": 184,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "9 lbs",
+    "dimensions": "16x14x5 inches",
+    "rating": 4.8
+  },
+  {
+    "id": "Control-Arm-L",
+    "name": "Lower Control Arm",
+    "description": "Front lower control arm with ball joint.",
+    "price": 65.0,
+    "currency": "USD",
+    "category": "Suspension",
+    "manufacturer": "RideSmooth",
+    "part_number": "Control-Arm-L",
+    "stock_quantity": 22,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "12 lbs",
+    "dimensions": "6x19x2 inches",
+    "rating": 4.5
+  },
+  {
+    "id": "O2-Sensor",
+    "name": "Oxygen Sensor",
+    "description": "Upstream oxygen sensor.",
+    "price": 35.99,
+    "currency": "USD",
+    "category": "Engine",
+    "manufacturer": "PowerDrive",
+    "part_number": "O2-Sensor",
+    "stock_quantity": 95,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "4 lbs",
+    "dimensions": "16x16x8 inches",
+    "rating": 3.8
+  },
+  {
+    "id": "Cat-Conv",
+    "name": "Catalytic Converter",
+    "description": "Universal fit catalytic converter.",
+    "price": 150.0,
+    "currency": "USD",
+    "category": "Exhaust",
+    "manufacturer": "SilentFlow",
+    "part_number": "Cat-Conv",
+    "stock_quantity": 57,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Universal"
+    ],
+    "weight": "5 lbs",
+    "dimensions": "6x14x5 inches",
+    "rating": 4.1
+  },
+  {
+    "id": "Seat-Cover",
+    "name": "Leather Seat Covers",
+    "description": "Universal fit faux leather seat covers.",
+    "price": 80.0,
+    "currency": "USD",
+    "category": "Interior",
+    "manufacturer": "ComfortPlus",
+    "part_number": "Seat-Cover",
+    "stock_quantity": 188,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Universal"
+    ],
+    "weight": "5 lbs",
+    "dimensions": "5x13x5 inches",
+    "rating": 5.0
+  },
+  {
+    "id": "Headlight-LED",
+    "name": "LED Headlight Bulbs",
+    "description": "6000K bright white LED headlight conversion kit.",
+    "price": 39.99,
+    "currency": "USD",
+    "category": "Electrical",
+    "manufacturer": "VoltTech",
+    "part_number": "Headlight-LED",
+    "stock_quantity": 162,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "10 lbs",
+    "dimensions": "14x20x2 inches",
+    "rating": 3.5
+  },
+  {
+    "id": "Starter-Motor",
+    "name": "Heavy Duty Starter",
+    "description": "Reliable starter motor for cold climates.",
+    "price": 115.0,
+    "currency": "USD",
+    "category": "Electrical",
+    "manufacturer": "VoltTech",
+    "part_number": "Starter-Motor",
+    "stock_quantity": 72,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "5 lbs",
+    "dimensions": "19x15x3 inches",
+    "rating": 5.0
+  },
+  {
+    "id": "Fuel-Pump",
+    "name": "Electric Fuel Pump",
+    "description": "In-tank electric fuel pump module.",
+    "price": 130.0,
+    "currency": "USD",
+    "category": "Engine",
+    "manufacturer": "PowerDrive",
+    "part_number": "Fuel-Pump",
+    "stock_quantity": 73,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "11 lbs",
+    "dimensions": "11x16x4 inches",
+    "rating": 4.1
+  },
+  {
+    "id": "Shock-Rear",
+    "name": "Rear Shock Absorber",
+    "description": "Gas charged rear shock absorber.",
+    "price": 45.0,
+    "currency": "USD",
+    "category": "Suspension",
+    "manufacturer": "RideSmooth",
+    "part_number": "Shock-Rear",
+    "stock_quantity": 11,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "8 lbs",
+    "dimensions": "16x13x5 inches",
+    "rating": 3.6
+  },
+  {
+    "id": "Thermostat",
+    "name": "Coolant Thermostat",
+    "description": "180 degree thermostat with gasket.",
+    "price": 12.99,
+    "currency": "USD",
+    "category": "Engine",
+    "manufacturer": "PowerDrive",
+    "part_number": "Thermostat",
+    "stock_quantity": 160,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "5 lbs",
+    "dimensions": "5x14x3 inches",
+    "rating": 4.8
+  },
+  {
+    "id": "SIL-THR-5957",
+    "name": "Ultra Throttle Body",
+    "description": "High quality ultra throttle body for reliable performance. Manufactured by SilentFlow.",
+    "price": 254.76,
+    "currency": "USD",
+    "category": "Engine",
+    "manufacturer": "SilentFlow",
+    "part_number": "SIL-THR-5957",
+    "stock_quantity": 61,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "12 lbs",
+    "dimensions": "16x9x10 inches",
+    "rating": 3.1
+  },
+  {
+    "id": "RID-ABS-2117",
+    "name": "Premium ABS Sensor",
+    "description": "High quality premium abs sensor for reliable performance. Manufactured by RideSmooth.",
+    "price": 220.72,
+    "currency": "USD",
+    "category": "Brakes",
+    "manufacturer": "RideSmooth",
+    "part_number": "RID-ABS-2117",
+    "stock_quantity": 458,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "11 lbs",
+    "dimensions": "27x17x12 inches",
+    "rating": 3.8
+  },
+  {
+    "id": "SPA-INT-8084",
+    "name": "Standard Intake Manifold",
+    "description": "High quality standard intake manifold for reliable performance. Manufactured by SparkMaster.",
+    "price": 45.86,
+    "currency": "USD",
+    "category": "Engine",
+    "manufacturer": "SparkMaster",
+    "part_number": "SPA-INT-8084",
+    "stock_quantity": 14,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "1 lbs",
+    "dimensions": "26x17x2 inches",
+    "rating": 4.6
+  },
+  {
+    "id": "VOL-CAB-7133",
+    "name": "Heavy Duty Cabin Air Filter",
+    "description": "High quality heavy duty cabin air filter for reliable performance. Manufactured by VoltTech.",
+    "price": 264.12,
+    "currency": "USD",
+    "category": "Filters",
+    "manufacturer": "VoltTech",
+    "part_number": "VOL-CAB-7133",
+    "stock_quantity": 81,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "17 lbs",
+    "dimensions": "6x8x7 inches",
+    "rating": 4.6
+  },
+  {
+    "id": "VOL-CAB-9062",
+    "name": "Economy Cabin Air Filter",
+    "description": "High quality economy cabin air filter for reliable performance. Manufactured by VoltTech.",
+    "price": 158.14,
+    "currency": "USD",
+    "category": "Filters",
+    "manufacturer": "VoltTech",
+    "part_number": "VOL-CAB-9062",
+    "stock_quantity": 193,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "9 lbs",
+    "dimensions": "14x15x10 inches",
+    "rating": 3.7
+  },
+  {
+    "id": "RID-REL-7723",
+    "name": "Pro-Series Relay",
+    "description": "High quality pro-series relay for reliable performance. Manufactured by RideSmooth.",
+    "price": 258.8,
+    "currency": "USD",
+    "category": "Electrical",
+    "manufacturer": "RideSmooth",
+    "part_number": "RID-REL-7723",
+    "stock_quantity": 444,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "15 lbs",
+    "dimensions": "21x19x10 inches",
+    "rating": 4.1
+  },
+  {
+    "id": "PUR-BAT-5619",
+    "name": "Standard Battery Cable",
+    "description": "High quality standard battery cable for reliable performance. Manufactured by PureFlow.",
+    "price": 122.68,
+    "currency": "USD",
+    "category": "Electrical",
+    "manufacturer": "PureFlow",
+    "part_number": "PUR-BAT-5619",
+    "stock_quantity": 223,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "5 lbs",
+    "dimensions": "9x10x6 inches",
+    "rating": 4.8
+  },
+  {
+    "id": "GEA-FUS-4461",
+    "name": "Performance Fuse Kit",
+    "description": "High quality performance fuse kit for reliable performance. Manufactured by GearPro.",
+    "price": 181.54,
+    "currency": "USD",
+    "category": "Electrical",
+    "manufacturer": "GearPro",
+    "part_number": "GEA-FUS-4461",
+    "stock_quantity": 60,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "11 lbs",
+    "dimensions": "22x9x2 inches",
+    "rating": 4.6
+  },
+  {
+    "id": "RID-STE-1257",
+    "name": "Premium Steering Rack",
+    "description": "High quality premium steering rack for reliable performance. Manufactured by RideSmooth.",
+    "price": 25.78,
+    "currency": "USD",
+    "category": "Steering",
+    "manufacturer": "RideSmooth",
+    "part_number": "RID-STE-1257",
+    "stock_quantity": 270,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "3 lbs",
+    "dimensions": "22x14x2 inches",
+    "rating": 4.4
+  },
+  {
+    "id": "COM-SID-5167",
+    "name": "OEM Replacement Side Mirror",
+    "description": "High quality oem replacement side mirror for reliable performance. Manufactured by ComfortPlus.",
+    "price": 232.21,
+    "currency": "USD",
+    "category": "Body",
+    "manufacturer": "ComfortPlus",
+    "part_number": "COM-SID-5167",
+    "stock_quantity": 324,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "12 lbs",
+    "dimensions": "30x12x4 inches",
+    "rating": 4.0
+  },
+  {
+    "id": "AUT-REL-5525",
+    "name": "Premium Relay",
+    "description": "High quality premium relay for reliable performance. Manufactured by AutoMate.",
+    "price": 140.56,
+    "currency": "USD",
+    "category": "Electrical",
+    "manufacturer": "AutoMate",
+    "part_number": "AUT-REL-5525",
+    "stock_quantity": 26,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "18 lbs",
+    "dimensions": "13x6x9 inches",
+    "rating": 4.1
+  },
+  {
+    "id": "AUT-STE-2275",
+    "name": "Performance Steering Rack",
+    "description": "High quality performance steering rack for reliable performance. Manufactured by AutoMate.",
+    "price": 283.18,
+    "currency": "USD",
+    "category": "Steering",
+    "manufacturer": "AutoMate",
+    "part_number": "AUT-STE-2275",
+    "stock_quantity": 300,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "17 lbs",
+    "dimensions": "9x13x8 inches",
+    "rating": 3.9
+  },
+  {
+    "id": "RID-FUE-9658",
+    "name": "Economy Fuel Injector",
+    "description": "High quality economy fuel injector for reliable performance. Manufactured by RideSmooth.",
+    "price": 147.82,
+    "currency": "USD",
+    "category": "Engine",
+    "manufacturer": "RideSmooth",
+    "part_number": "RID-FUE-9658",
+    "stock_quantity": 436,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "2 lbs",
+    "dimensions": "28x20x3 inches",
+    "rating": 4.4
+  },
+  {
+    "id": "POW-SID-3222",
+    "name": "Premium Side Mirror",
+    "description": "High quality premium side mirror for reliable performance. Manufactured by PowerDrive.",
+    "price": 30.3,
+    "currency": "USD",
+    "category": "Body",
+    "manufacturer": "PowerDrive",
+    "part_number": "POW-SID-3222",
+    "stock_quantity": 10,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "4 lbs",
+    "dimensions": "16x17x2 inches",
+    "rating": 5.0
+  },
+  {
+    "id": "VOL-MAS-6419",
+    "name": "Performance Master Cylinder",
+    "description": "High quality performance master cylinder for reliable performance. Manufactured by VoltTech.",
+    "price": 156.26,
+    "currency": "USD",
+    "category": "Brakes",
+    "manufacturer": "VoltTech",
+    "part_number": "VOL-MAS-6419",
+    "stock_quantity": 17,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "17 lbs",
+    "dimensions": "20x12x2 inches",
+    "rating": 3.1
+  },
+  {
+    "id": "GEA-THR-5779",
+    "name": "Pro-Series Throttle Body",
+    "description": "High quality pro-series throttle body for reliable performance. Manufactured by GearPro.",
+    "price": 131.47,
+    "currency": "USD",
+    "category": "Engine",
+    "manufacturer": "GearPro",
+    "part_number": "GEA-THR-5779",
+    "stock_quantity": 302,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "9 lbs",
+    "dimensions": "22x12x11 inches",
+    "rating": 4.1
+  },
+  {
+    "id": "VOL-ABS-8398",
+    "name": "Pro-Series ABS Sensor",
+    "description": "High quality pro-series abs sensor for reliable performance. Manufactured by VoltTech.",
+    "price": 154.23,
+    "currency": "USD",
+    "category": "Brakes",
+    "manufacturer": "VoltTech",
+    "part_number": "VOL-ABS-8398",
+    "stock_quantity": 445,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "9 lbs",
+    "dimensions": "27x5x7 inches",
+    "rating": 3.8
+  },
+  {
+    "id": "VOL-INT-8321",
+    "name": "Ultra Intake Manifold",
+    "description": "High quality ultra intake manifold for reliable performance. Manufactured by VoltTech.",
+    "price": 19.47,
+    "currency": "USD",
+    "category": "Engine",
+    "manufacturer": "VoltTech",
+    "part_number": "VOL-INT-8321",
+    "stock_quantity": 47,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "20 lbs",
+    "dimensions": "20x14x11 inches",
+    "rating": 4.2
+  },
+  {
+    "id": "STO-TIE-9750",
+    "name": "OEM Replacement Tie Rod End",
+    "description": "High quality oem replacement tie rod end for reliable performance. Manufactured by StopSafe.",
+    "price": 289.45,
+    "currency": "USD",
+    "category": "Suspension",
+    "manufacturer": "StopSafe",
+    "part_number": "STO-TIE-9750",
+    "stock_quantity": 143,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "18 lbs",
+    "dimensions": "28x11x15 inches",
+    "rating": 4.9
+  },
+  {
+    "id": "PUR-REL-2974",
+    "name": "Pro-Series Relay",
+    "description": "High quality pro-series relay for reliable performance. Manufactured by PureFlow.",
+    "price": 228.04,
+    "currency": "USD",
+    "category": "Electrical",
+    "manufacturer": "PureFlow",
+    "part_number": "PUR-REL-2974",
+    "stock_quantity": 420,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "1 lbs",
+    "dimensions": "22x13x14 inches",
+    "rating": 4.4
+  },
+  {
+    "id": "STO-BRA-8663",
+    "name": "Premium Brake Caliper",
+    "description": "High quality premium brake caliper for reliable performance. Manufactured by StopSafe.",
+    "price": 74.23,
+    "currency": "USD",
+    "category": "Brakes",
+    "manufacturer": "StopSafe",
+    "part_number": "STO-BRA-8663",
+    "stock_quantity": 274,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "18 lbs",
+    "dimensions": "16x13x6 inches",
+    "rating": 4.5
+  },
+  {
+    "id": "POW-REL-2281",
+    "name": "Performance Relay",
+    "description": "High quality performance relay for reliable performance. Manufactured by PowerDrive.",
+    "price": 170.44,
+    "currency": "USD",
+    "category": "Electrical",
+    "manufacturer": "PowerDrive",
+    "part_number": "POW-REL-2281",
+    "stock_quantity": 476,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "9 lbs",
+    "dimensions": "13x13x4 inches",
+    "rating": 3.5
+  },
+  {
+    "id": "SPA-TIE-1591",
+    "name": "Economy Tie Rod End",
+    "description": "High quality economy tie rod end for reliable performance. Manufactured by SparkMaster.",
+    "price": 251.11,
+    "currency": "USD",
+    "category": "Suspension",
+    "manufacturer": "SparkMaster",
+    "part_number": "SPA-TIE-1591",
+    "stock_quantity": 345,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "3 lbs",
+    "dimensions": "6x9x12 inches",
+    "rating": 4.0
+  },
+  {
+    "id": "SIL-TIM-7551",
+    "name": "Pro-Series Timing Belt",
+    "description": "High quality pro-series timing belt for reliable performance. Manufactured by SilentFlow.",
+    "price": 121.13,
+    "currency": "USD",
+    "category": "Engine",
+    "manufacturer": "SilentFlow",
+    "part_number": "SIL-TIM-7551",
+    "stock_quantity": 261,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "17 lbs",
+    "dimensions": "22x17x8 inches",
+    "rating": 4.7
+  },
+  {
+    "id": "SIL-WAT-2076",
+    "name": "Standard Water Pump",
+    "description": "High quality standard water pump for reliable performance. Manufactured by SilentFlow.",
+    "price": 289.66,
+    "currency": "USD",
+    "category": "Engine",
+    "manufacturer": "SilentFlow",
+    "part_number": "SIL-WAT-2076",
+    "stock_quantity": 431,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "7 lbs",
+    "dimensions": "7x10x6 inches",
+    "rating": 3.9
+  },
+  {
+    "id": "PUR-SID-8040",
+    "name": "OEM Replacement Side Mirror",
+    "description": "High quality oem replacement side mirror for reliable performance. Manufactured by PureFlow.",
+    "price": 79.36,
+    "currency": "USD",
+    "category": "Body",
+    "manufacturer": "PureFlow",
+    "part_number": "PUR-SID-8040",
+    "stock_quantity": 7,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "5 lbs",
+    "dimensions": "22x14x8 inches",
+    "rating": 3.0
+  },
+  {
+    "id": "SIL-BRA-3906",
+    "name": "Standard Brake Drum",
+    "description": "High quality standard brake drum for reliable performance. Manufactured by SilentFlow.",
+    "price": 295.35,
+    "currency": "USD",
+    "category": "Brakes",
+    "manufacturer": "SilentFlow",
+    "part_number": "SIL-BRA-3906",
+    "stock_quantity": 28,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "16 lbs",
+    "dimensions": "23x19x5 inches",
+    "rating": 3.6
+  },
+  {
+    "id": "AUT-MAS-9015",
+    "name": "Performance Master Cylinder",
+    "description": "High quality performance master cylinder for reliable performance. Manufactured by AutoMate.",
+    "price": 72.08,
+    "currency": "USD",
+    "category": "Brakes",
+    "manufacturer": "AutoMate",
+    "part_number": "AUT-MAS-9015",
+    "stock_quantity": 165,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "4 lbs",
+    "dimensions": "5x5x5 inches",
+    "rating": 4.0
+  },
+  {
+    "id": "SIL-THR-9196",
+    "name": "Premium Throttle Body",
+    "description": "High quality premium throttle body for reliable performance. Manufactured by SilentFlow.",
+    "price": 24.83,
+    "currency": "USD",
+    "category": "Engine",
+    "manufacturer": "SilentFlow",
+    "part_number": "SIL-THR-9196",
+    "stock_quantity": 94,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "8 lbs",
+    "dimensions": "19x11x11 inches",
+    "rating": 4.0
+  },
+  {
+    "id": "RID-SWA-5635",
+    "name": "Heavy Duty Sway Bar Link",
+    "description": "High quality heavy duty sway bar link for reliable performance. Manufactured by RideSmooth.",
+    "price": 15.46,
+    "currency": "USD",
+    "category": "Suspension",
+    "manufacturer": "RideSmooth",
+    "part_number": "RID-SWA-5635",
+    "stock_quantity": 419,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "5 lbs",
+    "dimensions": "18x10x9 inches",
+    "rating": 4.3
+  },
+  {
+    "id": "GEA-ABS-6430",
+    "name": "Performance ABS Sensor",
+    "description": "High quality performance abs sensor for reliable performance. Manufactured by GearPro.",
+    "price": 18.26,
+    "currency": "USD",
+    "category": "Brakes",
+    "manufacturer": "GearPro",
+    "part_number": "GEA-ABS-6430",
+    "stock_quantity": 411,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "19 lbs",
+    "dimensions": "29x16x14 inches",
+    "rating": 3.1
+  },
+  {
+    "id": "COM-GAS-3001",
+    "name": "Standard Gasket Set",
+    "description": "High quality standard gasket set for reliable performance. Manufactured by ComfortPlus.",
+    "price": 22.92,
+    "currency": "USD",
+    "category": "Engine",
+    "manufacturer": "ComfortPlus",
+    "part_number": "COM-GAS-3001",
+    "stock_quantity": 235,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "3 lbs",
+    "dimensions": "12x8x14 inches",
+    "rating": 3.9
+  },
+  {
+    "id": "GEA-GAS-9327",
+    "name": "Ultra Gasket Set",
+    "description": "High quality ultra gasket set for reliable performance. Manufactured by GearPro.",
+    "price": 175.38,
+    "currency": "USD",
+    "category": "Engine",
+    "manufacturer": "GearPro",
+    "part_number": "GEA-GAS-9327",
+    "stock_quantity": 34,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "12 lbs",
+    "dimensions": "5x17x4 inches",
+    "rating": 5.0
+  },
+  {
+    "id": "VOL-GAS-5850",
+    "name": "Premium Gasket Set",
+    "description": "High quality premium gasket set for reliable performance. Manufactured by VoltTech.",
+    "price": 160.92,
+    "currency": "USD",
+    "category": "Engine",
+    "manufacturer": "VoltTech",
+    "part_number": "VOL-GAS-5850",
+    "stock_quantity": 80,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "5 lbs",
+    "dimensions": "18x13x9 inches",
+    "rating": 4.7
+  },
+  {
+    "id": "POW-TIE-2087",
+    "name": "Ultra Tie Rod End",
+    "description": "High quality ultra tie rod end for reliable performance. Manufactured by PowerDrive.",
+    "price": 299.48,
+    "currency": "USD",
+    "category": "Suspension",
+    "manufacturer": "PowerDrive",
+    "part_number": "POW-TIE-2087",
+    "stock_quantity": 476,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "8 lbs",
+    "dimensions": "23x20x3 inches",
+    "rating": 3.5
+  },
+  {
+    "id": "POW-GAS-3524",
+    "name": "Standard Gasket Set",
+    "description": "High quality standard gasket set for reliable performance. Manufactured by PowerDrive.",
+    "price": 24.58,
+    "currency": "USD",
+    "category": "Engine",
+    "manufacturer": "PowerDrive",
+    "part_number": "POW-GAS-3524",
+    "stock_quantity": 419,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "1 lbs",
+    "dimensions": "19x19x14 inches",
+    "rating": 3.7
+  },
+  {
+    "id": "PUR-ABS-7456",
+    "name": "Standard ABS Sensor",
+    "description": "High quality standard abs sensor for reliable performance. Manufactured by PureFlow.",
+    "price": 50.28,
+    "currency": "USD",
+    "category": "Brakes",
+    "manufacturer": "PureFlow",
+    "part_number": "PUR-ABS-7456",
+    "stock_quantity": 126,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "3 lbs",
+    "dimensions": "29x12x4 inches",
+    "rating": 3.3
+  },
+  {
+    "id": "SPA-INT-6252",
+    "name": "Economy Intake Manifold",
+    "description": "High quality economy intake manifold for reliable performance. Manufactured by SparkMaster.",
+    "price": 190.14,
+    "currency": "USD",
+    "category": "Engine",
+    "manufacturer": "SparkMaster",
+    "part_number": "SPA-INT-6252",
+    "stock_quantity": 424,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "5 lbs",
+    "dimensions": "5x18x13 inches",
+    "rating": 4.2
+  },
+  {
+    "id": "VOL-ABS-7100",
+    "name": "Standard ABS Sensor",
+    "description": "High quality standard abs sensor for reliable performance. Manufactured by VoltTech.",
+    "price": 105.41,
+    "currency": "USD",
+    "category": "Brakes",
+    "manufacturer": "VoltTech",
+    "part_number": "VOL-ABS-7100",
+    "stock_quantity": 82,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "6 lbs",
+    "dimensions": "8x12x4 inches",
+    "rating": 3.2
+  },
+  {
+    "id": "RID-STE-9495",
+    "name": "Economy Steering Rack",
+    "description": "High quality economy steering rack for reliable performance. Manufactured by RideSmooth.",
+    "price": 235.98,
+    "currency": "USD",
+    "category": "Steering",
+    "manufacturer": "RideSmooth",
+    "part_number": "RID-STE-9495",
+    "stock_quantity": 358,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "3 lbs",
+    "dimensions": "20x9x5 inches",
+    "rating": 4.5
+  },
+  {
+    "id": "COM-VAL-2248",
+    "name": "Pro-Series Valve Cover",
+    "description": "High quality pro-series valve cover for reliable performance. Manufactured by ComfortPlus.",
+    "price": 214.99,
+    "currency": "USD",
+    "category": "Engine",
+    "manufacturer": "ComfortPlus",
+    "part_number": "COM-VAL-2248",
+    "stock_quantity": 137,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "12 lbs",
+    "dimensions": "7x17x14 inches",
+    "rating": 5.0
+  },
+  {
+    "id": "SPA-THR-9767",
+    "name": "Ultra Throttle Body",
+    "description": "High quality ultra throttle body for reliable performance. Manufactured by SparkMaster.",
+    "price": 285.41,
+    "currency": "USD",
+    "category": "Engine",
+    "manufacturer": "SparkMaster",
+    "part_number": "SPA-THR-9767",
+    "stock_quantity": 148,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "15 lbs",
+    "dimensions": "30x10x3 inches",
+    "rating": 4.0
+  },
+  {
+    "id": "POW-BRA-7578",
+    "name": "Standard Brake Caliper",
+    "description": "High quality standard brake caliper for reliable performance. Manufactured by PowerDrive.",
+    "price": 134.83,
+    "currency": "USD",
+    "category": "Brakes",
+    "manufacturer": "PowerDrive",
+    "part_number": "POW-BRA-7578",
+    "stock_quantity": 290,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "13 lbs",
+    "dimensions": "30x14x6 inches",
+    "rating": 4.7
+  },
+  {
+    "id": "GEA-HEA-7037",
+    "name": "Performance Headlight Assembly",
+    "description": "High quality performance headlight assembly for reliable performance. Manufactured by GearPro.",
+    "price": 233.46,
+    "currency": "USD",
+    "category": "Body",
+    "manufacturer": "GearPro",
+    "part_number": "GEA-HEA-7037",
+    "stock_quantity": 85,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "7 lbs",
+    "dimensions": "8x5x2 inches",
+    "rating": 4.5
+  },
+  {
+    "id": "GEA-FUE-3982",
+    "name": "Standard Fuel Filter",
+    "description": "High quality standard fuel filter for reliable performance. Manufactured by GearPro.",
+    "price": 165.98,
+    "currency": "USD",
+    "category": "Filters",
+    "manufacturer": "GearPro",
+    "part_number": "GEA-FUE-3982",
+    "stock_quantity": 183,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "19 lbs",
+    "dimensions": "18x7x4 inches",
+    "rating": 4.8
+  },
+  {
+    "id": "RID-MAS-5094",
+    "name": "OEM Replacement Master Cylinder",
+    "description": "High quality oem replacement master cylinder for reliable performance. Manufactured by RideSmooth.",
+    "price": 193.85,
+    "currency": "USD",
+    "category": "Brakes",
+    "manufacturer": "RideSmooth",
+    "part_number": "RID-MAS-5094",
+    "stock_quantity": 439,
+    "image_url": "/static/images/car-outline.svg",
+    "compatibility": [
+      "Various Models"
+    ],
+    "weight": "15 lbs",
+    "dimensions": "16x10x2 inches",
+    "rating": 3.4
+  }
+]
