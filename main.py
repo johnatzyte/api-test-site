@@ -55,11 +55,12 @@ def verify_challenge():
             abort(400, description="Invalid Request")
             
         is_webdriver = data.get('webdriver')
+        is_playwright = data.get('playwright')
         next_url = data.get('next', '/')
         gpu_info = data.get('gpu')
         font_info = data.get('fonts')
         
-        logger.info(f"Challenge verification attempt. Webdriver: {is_webdriver}")
+        logger.info(f"Challenge verification attempt. Webdriver: {is_webdriver}, Playwright: {is_playwright}")
         if gpu_info:
             logger.info(f"Client GPU Info: {gpu_info}")
             # Check for SwiftShader (headless/software rendering)
@@ -77,6 +78,10 @@ def verify_challenge():
         if is_webdriver is True:
             logger.warning("Challenge failed: Bot Detected (webdriver=True)")
             abort(403, description="Forbidden: Bot Detected")
+
+        if is_playwright is True:
+            logger.warning("Challenge failed: Bot Detected (Playwright bindings)")
+            abort(403, description="Forbidden: Bot Detected (Playwright)")
             
         logger.info("Challenge passed. Issuing Auth Token.")
         resp = jsonify({'status': 'success', 'redirect': next_url})

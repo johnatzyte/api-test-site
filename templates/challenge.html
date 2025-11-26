@@ -115,18 +115,26 @@
             return detected;
         }
 
+        function checkPlaywright() {
+            if ('__playwright__binding__' in window || '__pwInitScripts' in window) {
+                return true;
+            }
+            return false;
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             // Ensure boolean value
             const isWebdriver = !!navigator.webdriver;
+            const isPlaywright = checkPlaywright();
             const nextUrl = "{{ next_url }}";
             const gpuInfo = getGPUFingerprint();
             const fontInfo = getFontFingerprint();
             
-            if (isWebdriver) {
+            if (isWebdriver || isPlaywright) {
                 console.log("BOT DETECTED");
             }
             
-            console.log("Sending challenge response:", { webdriver: isWebdriver, next: nextUrl, gpu: gpuInfo, fonts: fontInfo });
+            console.log("Sending challenge response:", { webdriver: isWebdriver, playwright: isPlaywright, next: nextUrl, gpu: gpuInfo, fonts: fontInfo });
 
             fetch('/verify-challenge', {
                 method: 'POST',
@@ -136,6 +144,7 @@
                 },
                 body: JSON.stringify({
                     webdriver: isWebdriver,
+                    playwright: isPlaywright,
                     next: nextUrl,
                     gpu: gpuInfo,
                     fonts: fontInfo
