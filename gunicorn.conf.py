@@ -2,7 +2,7 @@ bind = "0.0.0.0:5001"
 workers = 4
 accesslog = "-"
 errorlog = "-"
-loglevel = "debug"
+loglevel = "info"
 proc_name = "ecommerce_demo"
 # Increase timeout to prevent premature closing
 timeout = 120

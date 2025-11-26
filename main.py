@@ -48,38 +48,29 @@ def restrict_api_access():
 @app.route('/verify-challenge', methods=['POST'])
 def verify_challenge():
     try:
-        # Log headers to debug potential proxy/stripping issues
-        logger.info(f"Verify Challenge Headers: {dict(request.headers)}")
+        data = request.get_json(silent=True)
         
-        # Try to read data using get_data() which handles caching
-        raw_data = request.get_data()
-        
-        # If raw_data is empty but Content-Length is present, try reading from stream
-        if not raw_data and request.content_length:
-            logger.info("Attempting to read from input stream directly...")
-            raw_data = request.stream.read()
-            
-        logger.info(f"Verify Challenge Raw Data: {raw_data}")
-
-        data = None
-        if raw_data:
-            try:
-                data = json.loads(raw_data)
-            except Exception as e:
-                logger.error(f"JSON parse error: {e}")
-
         if not data:
-            # If data is still empty, check if it was parsed as form data (unlikely but possible)
-            if request.form:
-                data = request.form.to_dict()
-            else:
-                logger.error(f"Challenge failed: No data received. Content-Length: {request.content_length}")
-                abort(400, description="Invalid Request: Empty Body")
+            logger.error("Challenge failed: No JSON data received")
+            abort(400, description="Invalid Request")
             
         is_webdriver = data.get('webdriver')
         next_url = data.get('next', '/')
+        gpu_info = data.get('gpu')
+        font_info = data.get('fonts')
         
         logger.info(f"Challenge verification attempt. Webdriver: {is_webdriver}")
+        if gpu_info:
+            logger.info(f"Client GPU Info: {gpu_info}")
+            # Check for SwiftShader (headless/software rendering)
+            renderer = gpu_info.get('renderer', '')
+            vendor = gpu_info.get('vendor', '')
+            if 'SwiftShader' in renderer or 'SwiftShader' in vendor:
+                logger.warning(f"Challenge failed: Bot Detected (SwiftShader GPU: {renderer})")
+                abort(403, description="Forbidden: Bot Detected (GPU)")
+
+        if font_info:
+            logger.info(f"Client Font Info: {font_info}")
 
         # Check if webdriver is false (or undefined/None which we treat as passing for now)
         # If it is explicitly True, we fail.
@@ -92,7 +83,7 @@ def verify_challenge():
         
         # Determine if we should use Secure cookies (if request is HTTPS)
         is_secure = request.scheme == 'https'
-        resp.set_cookie('AUTH_TOKEN', str(uuid.uuid4()), httponly=True, samesite='Lax', secure=is_secure)
+        resp.set_cookie('AUTH_TOKEN', str(uuid.uuid4()), httponly=True, samesite='Lax', secure=is_secure, max_age=300)
         return resp
     except Exception as e:
         logger.error(f"Error in verify_challenge: {str(e)}")

@@ -9,3 +9,5 @@ services:
       # Mount products.json so you can update products without rebuilding
       - ./products.json:/app/products.json
     restart: unless-stopped
+
+
