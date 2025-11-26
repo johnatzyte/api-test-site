@@ -116,7 +116,7 @@
         }
 
         function checkPlaywright() {
-            if ('__playwright__binding__' in window || '__pwInitScripts' in window) {
+            if ('__playwright__binding__' in window) {
                 return true;
             }
             return false;
