@@ -116,57 +116,60 @@
         }
 
         function checkPlaywright() {
-            if ('__playwright__binding__' in window) {
-                return true;
-            }
+            if ('__playwright__binding__' in window) return true;
+            if ('__pwInitScripts' in window) return true;
+            if ('playwright' in window) return true;
             return false;
         }
 
         document.addEventListener('DOMContentLoaded', function() {
-            // Ensure boolean value
-            const isWebdriver = !!navigator.webdriver;
-            const isPlaywright = checkPlaywright();
-            const nextUrl = "{{ next_url }}";
-            const gpuInfo = getGPUFingerprint();
-            const fontInfo = getFontFingerprint();
-            
-            if (isWebdriver || isPlaywright) {
-                console.log("BOT DETECTED");
-            }
-            
-            console.log("Sending challenge response:", { webdriver: isWebdriver, playwright: isPlaywright, next: nextUrl, gpu: gpuInfo, fonts: fontInfo });
+            // Add a small delay to allow for async binding injection
+            setTimeout(() => {
+                // Ensure boolean value
+                const isWebdriver = !!navigator.webdriver;
+                const isPlaywright = checkPlaywright();
+                const nextUrl = "{{ next_url }}";
+                const gpuInfo = getGPUFingerprint();
+                const fontInfo = getFontFingerprint();
+                
+                if (isWebdriver || isPlaywright) {
+                    console.log("BOT DETECTED");
+                }
+                
+                console.log("Sending challenge response:", { webdriver: isWebdriver, playwright: isPlaywright, next: nextUrl, gpu: gpuInfo, fonts: fontInfo });
 
-            fetch('/verify-challenge', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: JSON.stringify({
-                    webdriver: isWebdriver,
-                    playwright: isPlaywright,
-                    next: nextUrl,
-                    gpu: gpuInfo,
-                    fonts: fontInfo
+                fetch('/verify-challenge', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        webdriver: isWebdriver,
+                        playwright: isPlaywright,
+                        next: nextUrl,
+                        gpu: gpuInfo,
+                        fonts: fontInfo
+                    })
                 })
-            })
-            .then(response => {
-                if (response.ok) {
-                    return response.json();
-                }
-                throw new Error('Verification failed');
-            })
-            .then(data => {
-                if (data.redirect) {
-                    window.location.href = data.redirect;
-                }
-            })
-            .catch(error => {
-                document.querySelector('.container').innerHTML = `
-                    <h2 style="color: #e74c3c;">Access Denied</h2>
-                    <p>Browser verification failed.</p>
-                `;
-            });
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                    throw new Error('Verification failed');
+                })
+                .then(data => {
+                    if (data.redirect) {
+                        window.location.href = data.redirect;
+                    }
+                })
+                .catch(error => {
+                    document.querySelector('.container').innerHTML = `
+                        <h2 style="color: #e74c3c;">Access Denied</h2>
+                        <p>Browser verification failed.</p>
+                    `;
+                });
+            }, 500);
         });
     </script>
 </body>
