@@ -5,13 +5,36 @@ from werkzeug.middleware.proxy_fix import ProxyFix
 import math
 import uuid
 import logging
+import hashlib
+import hmac
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
+SECRET_KEY = b'super-secret-key-change-this-in-prod'
+
 app = Flask(__name__)
 app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_port=1)
+
+def generate_token(ip_address):
+    token_id = str(uuid.uuid4())
+    # Create a signature binding the token ID to the IP address
+    msg = f"{token_id}:{ip_address}".encode('utf-8')
+    signature = hmac.new(SECRET_KEY, msg, hashlib.sha256).hexdigest()
+    return f"{token_id}:{signature}"
+
+def validate_token(token_str, ip_address):
+    if not token_str or ':' not in token_str:
+        return False
+    
+    try:
+        token_id, signature = token_str.split(':', 1)
+        msg = f"{token_id}:{ip_address}".encode('utf-8')
+        expected_signature = hmac.new(SECRET_KEY, msg, hashlib.sha256).hexdigest()
+        return hmac.compare_digest(signature, expected_signature)
+    except Exception:
+        return False
 
 # Allow CORS for all origins on API routes to support VPS/remote access
 CORS(app, resources={r"/api/*": {"origins": "*"}})
@@ -33,16 +56,22 @@ def restrict_api_access():
             logger.warning(f"Blocked API access due to Referer mismatch. Host: {request.host}, Referer: {referer}")
             abort(403, description="Forbidden")
 
-        # Check for Auth Token cookie
-        if not request.cookies.get('AUTH_TOKEN'):
-            logger.warning("Blocked API access due to missing Auth Token")
-            abort(403, description="Forbidden: Missing Auth Token")
+        # Check for Auth Token cookie and validate IP binding
+        token = request.cookies.get('AUTH_TOKEN')
+        
+        # Debug logging to troubleshoot IP binding
+        logger.info(f"Validating request from IP: {request.remote_addr} (X-Forwarded-For: {request.headers.get('X-Forwarded-For')})")
+        
+        if not token or not validate_token(token, request.remote_addr):
+            logger.warning(f"Blocked API access due to invalid/missing Auth Token or IP mismatch. IP: {request.remote_addr}")
+            abort(403, description="Forbidden: Invalid Auth Token")
     
     # Check if it's a page request (not API, not static, not verify)
     elif not request.path.startswith('/static/') and request.path != '/verify-challenge' and request.path != '/favicon.ico':
-        # If cookie is missing, serve challenge
-        if not request.cookies.get('AUTH_TOKEN'):
-            logger.info(f"Missing Auth Token for {request.path}, serving challenge")
+        # If cookie is missing or invalid, serve challenge
+        token = request.cookies.get('AUTH_TOKEN')
+        if not token or not validate_token(token, request.remote_addr):
+            logger.info(f"Missing or invalid Auth Token for {request.path} (IP: {request.remote_addr}), serving challenge")
             return render_template('challenge.html', next_url=request.url)
 
 @app.route('/verify-challenge', methods=['POST'])
@@ -88,7 +117,12 @@ def verify_challenge():
         
         # Determine if we should use Secure cookies (if request is HTTPS)
         is_secure = request.scheme == 'https'
-        resp.set_cookie('AUTH_TOKEN', str(uuid.uuid4()), httponly=True, samesite='Lax', secure=is_secure, max_age=300)
+        
+        # Generate IP-bound token
+        logger.info(f"Generating token for IP: {request.remote_addr}")
+        auth_token = generate_token(request.remote_addr)
+        
+        resp.set_cookie('AUTH_TOKEN', auth_token, httponly=True, samesite='Lax', secure=is_secure, max_age=300)
         return resp
     except Exception as e:
         logger.error(f"Error in verify_challenge: {str(e)}")
