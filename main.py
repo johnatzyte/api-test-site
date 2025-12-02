@@ -7,6 +7,7 @@ import uuid
 import logging
 import hashlib
 import hmac
+import base64
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -58,10 +59,6 @@ def restrict_api_access():
 
         # Check for Auth Token cookie and validate IP binding
         token = request.cookies.get('AUTH_TOKEN')
-        
-        # Debug logging to troubleshoot IP binding
-        logger.info(f"Validating request from IP: {request.remote_addr} (X-Forwarded-For: {request.headers.get('X-Forwarded-For')})")
-        
         if not token or not validate_token(token, request.remote_addr):
             logger.warning(f"Blocked API access due to invalid/missing Auth Token or IP mismatch. IP: {request.remote_addr}")
             abort(403, description="Forbidden: Invalid Auth Token")
@@ -77,11 +74,18 @@ def restrict_api_access():
 @app.route('/verify-challenge', methods=['POST'])
 def verify_challenge():
     try:
-        data = request.get_json(silent=True)
-        
-        if not data:
-            logger.error("Challenge failed: No JSON data received")
+        # Expecting Base64 encoded JSON body
+        raw_data = request.get_data()
+        if not raw_data:
+            logger.error("Challenge failed: No data received")
             abort(400, description="Invalid Request")
+
+        try:
+            decoded_data = base64.b64decode(raw_data).decode('utf-8')
+            data = json.loads(decoded_data)
+        except Exception as e:
+            logger.error(f"Challenge failed: Failed to decode/parse data: {str(e)}")
+            abort(400, description="Invalid Request Data")
             
         is_webdriver = data.get('webdriver')
         is_playwright = data.get('playwright')
@@ -119,7 +123,6 @@ def verify_challenge():
         is_secure = request.scheme == 'https'
         
         # Generate IP-bound token
-        logger.info(f"Generating token for IP: {request.remote_addr}")
         auth_token = generate_token(request.remote_addr)
         
         resp.set_cookie('AUTH_TOKEN', auth_token, httponly=True, samesite='Lax', secure=is_secure, max_age=300)
