@@ -3,6 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const productDetail = document.getElementById('product-detail');
 
     if (productList) {
+        const searchForm = document.getElementById('search-form');
+        searchForm.addEventListener('submit', event => {
+            event.preventDefault();
+            const searchTerm = document.getElementById('product-search').value.trim();
+            loadProducts(1, searchTerm);
+        });
         loadProducts(1);
     }
 
@@ -11,12 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-async function loadProducts(page = 1) {
+async function loadProducts(page = 1, searchTerm = '') {
     try {
-        const response = await fetch(`/api/products?page=${page}&limit=8`);
+        const params = new URLSearchParams({ page, limit: 8 });
+        if (searchTerm) params.set('q', searchTerm);
+
+        const response = await fetch(`/api/products?${params}`);
         const data = await response.json();
         renderProductList(data.products);
-        renderPagination(data);
+        renderPagination(data, searchTerm);
     } catch (error) {
         console.error('Error loading products:', error);
         document.getElementById('product-list').innerHTML = '<p>Error loading products.</p>';
@@ -40,9 +49,13 @@ function renderProductList(products) {
         `;
         container.appendChild(card);
     });
+
+    if (products.length === 0) {
+        container.innerHTML = '<p class="empty-state">No products found. Try a different name or SKU.</p>';
+    }
 }
 
-function renderPagination(data) {
+function renderPagination(data, searchTerm = '') {
     const container = document.getElementById('pagination');
     if (!container) return;
     
@@ -56,7 +69,7 @@ function renderPagination(data) {
     const prevBtn = document.createElement('button');
     prevBtn.innerText = 'Previous';
     prevBtn.disabled = current_page === 1;
-    prevBtn.onclick = () => loadProducts(current_page - 1);
+    prevBtn.onclick = () => loadProducts(current_page - 1, searchTerm);
     container.appendChild(prevBtn);
 
     // Page Numbers
@@ -66,7 +79,7 @@ function renderPagination(data) {
         if (i === current_page) {
             pageBtn.classList.add('active');
         }
-        pageBtn.onclick = () => loadProducts(i);
+        pageBtn.onclick = () => loadProducts(i, searchTerm);
         container.appendChild(pageBtn);
     }
 
@@ -74,7 +87,7 @@ function renderPagination(data) {
     const nextBtn = document.createElement('button');
     nextBtn.innerText = 'Next';
     nextBtn.disabled = current_page === total_pages;
-    nextBtn.onclick = () => loadProducts(current_page + 1);
+    nextBtn.onclick = () => loadProducts(current_page + 1, searchTerm);
     container.appendChild(nextBtn);
 }
 

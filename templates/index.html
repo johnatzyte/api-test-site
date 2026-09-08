@@ -3,7 +3,22 @@
 {% block title %}Home - Auto Parts Demo Store{% endblock %}
 
 {% block content %}
-    <h2>Featured Products</h2>
+    <div class="products-header">
+        <h2>Featured Products</h2>
+        <form id="search-form" class="search-form" role="search">
+            <label for="product-search">Search products</label>
+            <div class="search-controls">
+                <input
+                    type="search"
+                    id="product-search"
+                    name="q"
+                    placeholder="Search by name or SKU"
+                    autocomplete="off"
+                >
+                <button type="submit" class="btn">Search</button>
+            </div>
+        </form>
+    </div>
     <div id="product-list" class="product-grid">
         <!-- Products will be loaded here by JS -->
         <p>Loading products...</p>

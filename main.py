@@ -152,6 +152,15 @@ def product_detail(id):
 def get_products():
     logger.info("API: Fetching products list")
     products = load_products()
+
+    search_term = request.args.get('q', '').strip().lower()
+    if search_term:
+        products = [
+            product for product in products
+            if search_term in product.get('name', '').lower()
+            or search_term in product.get('id', '').lower()
+            or search_term in product.get('part_number', '').lower()
+        ]
     
     # Pagination logic
     page = request.args.get('page', 1, type=int)
