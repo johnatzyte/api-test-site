@@ -15,9 +15,35 @@
                     placeholder="Search by name or SKU"
                     autocomplete="off"
                 >
-                <button type="submit" class="btn">Search</button>
+            </div>
+            <div class="filter-controls">
+                <label for="category-filter">Category</label>
+                <select id="category-filter" name="category">
+                    <option value="">All categories</option>
+                </select>
+                <label for="sort-products">Sort by</label>
+                <select id="sort-products" name="sort">
+                    <option value="relevance">Relevance</option>
+                    <option value="name_asc">Name</option>
+                    <option value="price_asc">Price: low to high</option>
+                    <option value="price_desc">Price: high to low</option>
+                    <option value="rating_desc">Rating</option>
+                </select>
+                <label class="stock-filter">
+                    <input type="checkbox" id="in-stock-filter" name="in_stock">
+                    In stock only
+                </label>
+                <button type="submit" class="btn">Apply</button>
             </div>
         </form>
+    </div>
+    <div id="comparison-panel" class="comparison-panel" hidden>
+        <div>
+            <strong><span id="comparison-count">0</span> products selected</strong>
+            <span class="comparison-hint">Choose up to 3 products to compare.</span>
+        </div>
+        <button type="button" id="compare-button" class="btn" disabled>Compare</button>
+        <button type="button" id="clear-comparison" class="text-button">Clear</button>
     </div>
     <div id="product-list" class="product-grid">
         <!-- Products will be loaded here by JS -->
@@ -27,4 +53,11 @@
     <div id="pagination" class="pagination-container">
         <!-- Pagination controls will be loaded here by JS -->
     </div>
+    <section id="comparison-view" class="comparison-view" hidden>
+        <div class="comparison-heading">
+            <h2>Compare products</h2>
+            <button type="button" id="close-comparison" class="text-button">Close</button>
+        </div>
+        <div id="comparison-table-container"></div>
+    </section>
 {% endblock %}

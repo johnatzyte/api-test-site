@@ -94,6 +94,34 @@ body {
     font: inherit;
 }
 
+.filter-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.7rem;
+}
+
+.filter-controls label {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.filter-controls select {
+    padding: 0.55rem 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: white;
+    font: inherit;
+}
+
+.stock-filter {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-weight: normal !important;
+}
+
 .search-controls .btn {
     border: 0;
     cursor: pointer;
@@ -104,6 +132,82 @@ body {
     grid-column: 1 / -1;
     text-align: center;
     padding: 2rem;
+}
+
+.comparison-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: #eaf4fb;
+    border: 1px solid #b9d9ed;
+    border-radius: 8px;
+}
+
+.comparison-hint {
+    display: block;
+    margin-top: 0.25rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.text-button {
+    border: 0;
+    background: transparent;
+    color: #2980b9;
+    cursor: pointer;
+    font: inherit;
+}
+
+.compare-option {
+    display: block;
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.sku {
+    margin: 0.3rem 0;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.comparison-view {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow-x: auto;
+}
+
+.comparison-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comparison-heading h2 {
+    margin-top: 0;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 560px;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 0.8rem;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+.comparison-table thead th {
+    color: #2c3e50;
 }
 
 /* Product Grid */
@@ -301,5 +405,20 @@ body {
     .search-controls input {
         flex: 1;
         width: auto;
+    }
+
+    .filter-controls {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .filter-controls select,
+    .filter-controls .btn {
+        width: 100%;
+    }
+
+    .comparison-panel {
+        align-items: stretch;
+        flex-direction: column;
     }
 }

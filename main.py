@@ -152,6 +152,7 @@ def product_detail(id):
 def get_products():
     logger.info("API: Fetching products list")
     products = load_products()
+    categories = sorted({product.get('category', '') for product in products if product.get('category')})
 
     search_term = request.args.get('q', '').strip().lower()
     if search_term:
@@ -161,6 +162,23 @@ def get_products():
             or search_term in product.get('id', '').lower()
             or search_term in product.get('part_number', '').lower()
         ]
+
+    category = request.args.get('category', '').strip().lower()
+    if category:
+        products = [product for product in products if product.get('category', '').lower() == category]
+
+    if request.args.get('in_stock', '').lower() == 'true':
+        products = [product for product in products if product.get('stock_quantity', 0) > 0]
+
+    sort = request.args.get('sort', 'relevance')
+    sort_keys = {
+        'name_asc': lambda product: product.get('name', '').lower(),
+        'price_asc': lambda product: product.get('price', 0),
+        'price_desc': lambda product: product.get('price', 0),
+        'rating_desc': lambda product: product.get('rating', 0),
+    }
+    if sort in sort_keys:
+        products.sort(key=sort_keys[sort], reverse=sort in {'price_desc', 'rating_desc'})
     
     # Pagination logic
     page = request.args.get('page', 1, type=int)
@@ -179,7 +197,9 @@ def get_products():
         'total_products': total_products,
         'total_pages': total_pages,
         'current_page': page,
-        'limit': limit
+        'limit': limit,
+        'categories': categories,
+        'sort': sort
     })
 
 @app.route('/api/products/<id>')
