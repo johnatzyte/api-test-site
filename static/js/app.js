@@ -232,6 +232,12 @@ function renderProductDetail(product) {
                 </ul>
             </div>
 
+            <div class="availability-check">
+                <h3>Availability</h3>
+                <button type="button" class="btn" id="availability-button">Check availability</button>
+                <p id="availability-result" class="availability-result" aria-live="polite"></p>
+            </div>
+
             <div class="compatibility">
                 <h3>Compatibility</h3>
                 <ul>
@@ -240,4 +246,34 @@ function renderProductDetail(product) {
             </div>
         </div>
     `;
+
+    document.getElementById('availability-button').addEventListener('click', () => {
+        checkAvailability(product.id);
+    });
+}
+
+async function checkAvailability(productId) {
+    const button = document.getElementById('availability-button');
+    const result = document.getElementById('availability-result');
+    button.disabled = true;
+    button.textContent = 'Checking...';
+    result.className = 'availability-result';
+    result.textContent = '';
+
+    try {
+        const response = await fetch(`/api/products/${encodeURIComponent(productId)}/availability`);
+        if (!response.ok) {
+            throw new Error('Availability check failed');
+        }
+        const data = await response.json();
+        result.classList.add(data.available ? 'available' : 'unavailable');
+        result.innerHTML = `<strong>${data.message}</strong><br>${data.stock_quantity} units available${data.estimated_dispatch ? `<br>${data.estimated_dispatch}` : ''}`;
+    } catch (error) {
+        console.error('Error checking availability:', error);
+        result.classList.add('unavailable');
+        result.textContent = 'Unable to check availability. Please try again.';
+    } finally {
+        button.disabled = false;
+        button.textContent = 'Check availability';
+    }
 }

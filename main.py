@@ -212,5 +212,26 @@ def get_product(id):
     logger.warning(f"API: Product {id} not found")
     abort(404)
 
+@app.route('/api/products/<id>/availability')
+def get_product_availability(id):
+    logger.info(f"API: Checking availability for product {id}")
+    products = load_products()
+    product = next((p for p in products if p['id'] == id), None)
+    if not product:
+        logger.warning(f"API: Product {id} not found for availability check")
+        abort(404)
+
+    quantity = product.get('stock_quantity', 0)
+    available = quantity > 0
+    return jsonify({
+        'product_id': product['id'],
+        'sku': product.get('part_number'),
+        'available': available,
+        'stock_quantity': quantity,
+        'status': 'in_stock' if available else 'out_of_stock',
+        'message': 'Available to order' if available else 'Currently out of stock',
+        'estimated_dispatch': 'Usually dispatches within 1 business day' if available else None
+    })
+
 if __name__ == "__main__":
     app.run(debug=True, port=5001)
