@@ -44,3 +44,16 @@ Product availability is returned by:
 ```text
 GET /api/products/<id>/availability
 ```
+
+## Chromium CDP tunnel
+
+For browser automation from the remote host, run this script on the machine
+where Chromium should run:
+
+```bash
+./scripts/start-chromium-cdp-tunnel.sh user@remote-host
+```
+
+It starts an isolated Chromium profile and creates a reverse SSH tunnel. The
+remote host can then connect to `http://127.0.0.1:9222`. Stop the script with
+`Ctrl-C` to close the tunnel and the browser.
